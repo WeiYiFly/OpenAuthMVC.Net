@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVC.Repository
+namespace MVC.Repository.Domain
 {
     public abstract class Entity
     {

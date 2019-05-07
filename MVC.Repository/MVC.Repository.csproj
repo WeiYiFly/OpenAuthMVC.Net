@@ -34,8 +34,16 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="EntityFramework.Extended, Version=6.0.0.0, Culture=neutral, PublicKeyToken=05b7e29bdd433584, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.Extended.6.1.0.168\lib\net45\EntityFramework.Extended.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -89,8 +97,14 @@
     <Compile Include="Mapping\UserMap.cs" />
     <Compile Include="MVCDBContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitWork.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+      <Project>{1c360e5b-c57c-487d-8790-0f5f4ac98808}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 
 namespace MVC.Repository
 {
-    public partial class OpenAuthDBContext : DbContext
+    public partial class MVCDBContext : DbContext
     {
-        static OpenAuthDBContext()
+        static MVCDBContext()
         {
-            Database.SetInitializer<OpenAuthDBContext>(null);
+            Database.SetInitializer<MVCDBContext>(null);
         }
 
-        public OpenAuthDBContext()
+        public MVCDBContext()
             : base("Name=OpenAuthDBContext")
         {
             // 关闭语义可空判断
@@ -29,7 +29,7 @@ namespace MVC.Repository
             Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
         }
 
-        public OpenAuthDBContext(string nameOrConnectionString)
+        public MVCDBContext(string nameOrConnectionString)
             : base(nameOrConnectionString)
         { }
 

@@ -1,12 +1,18 @@
-﻿
-
+﻿using System;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
+using System.Data.Entity.Validation;
+using System.Linq;
+using System.Linq.Expressions;
+using EntityFramework.Extensions;
+using Infrastructure;
 using MVC.Repository.Interface;
 
 namespace MVC.Repository
 {
     public class BaseRepository<T> : IRepository<T> where T : Domain.Entity
     {
-        protected OpenAuthDBContext Context = new OpenAuthDBContext();
+        protected MVCDBContext Context = new MVCDBContext();
 
 
         /// <summary>
